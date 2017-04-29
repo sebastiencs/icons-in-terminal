@@ -1,0 +1,30 @@
+[
+    {
+	"name": "octicons",
+	"path": "./fonts/octicons.ttf"
+    },
+    {
+	"name": "fontawesome",
+	"path": "./fonts/fontawesome.ttf"
+    },
+    {
+	"name": "material",
+	"path": "./fonts/material-design-icons.ttf"
+    },
+    {
+	"name": "fileicons",
+	"path": "./fonts/file-icons.ttf"
+    },
+    {
+	"name": "weather",
+	"path": "./fonts/weathericons.ttf"
+    },
+    {
+	"name": "linux",
+	"path": "./fonts/font-linux.ttf"
+    },
+    {
+	"name": "alltheicons",
+	"path": "./fonts/all-the-icons.ttf"
+    }
+]
