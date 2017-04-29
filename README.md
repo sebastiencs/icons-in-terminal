@@ -54,7 +54,7 @@ The file `icons.conf` tells to freetype to search the font in `myicons.ttf` if i
 
 ## Screenshot
 
-![Screenshot the included icons](image/icons.png)
+![Screenshot the included icons](image/icons.jpg)
 
 ## Todos
 
