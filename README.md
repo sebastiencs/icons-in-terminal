@@ -2,8 +2,8 @@
 
 ## Overview
 
-`icons-in-terminal` allows you to get any font in your terminal.  
-If you want to add a font, modify the file `config.json` to add its name and path.  
+`icons-in-terminal` allows you to get any font in your terminal without replacing or patching your font.  
+You can add as many fonts as you want, modify the file `config.json` to add its name and the path of the ttf file.  
 
 # Dependencies
 
