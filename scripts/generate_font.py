@@ -56,7 +56,7 @@ def make_name(name, codepoint):
     return name
 
 if len(sys.argv) < 2:
-    print("Give me a config file")
+    print("Give me a config file", file=sys.stderr)
     sys.exit(1)
 
 with open(sys.argv[1]) as config_file:
