@@ -5,26 +5,82 @@
     },
     {
 	"name": "fontawesome",
-	"path": "./fonts/fontawesome.ttf"
+	"path": "./fonts/FontAwesome.otf",
+	"start-from": "0xF000",
+	"until": "0xF2B5"
     },
     {
 	"name": "material",
-	"path": "./fonts/material-design-icons.ttf"
+	"path": "./fonts/material-design-icons.ttf",
+	"start-from": "0xE000",
+	"move-vertically": -150
     },
     {
 	"name": "fileicons",
-	"path": "./fonts/file-icons.ttf"
+	"path": "./fonts/file-icons.ttf",
+	"excludes": [ "0x20" ]
     },
     {
 	"name": "weather",
-	"path": "./fonts/weathericons.ttf"
+	"path": "./fonts/weathericons.ttf",
+	"start-from": "0xF000"
     },
     {
 	"name": "linux",
-	"path": "./fonts/font-linux.ttf"
+	"path": "./fonts/font-linux.ttf",
+	"start-from": "0xF100"
     },
     {
 	"name": "alltheicons",
-	"path": "./fonts/all-the-icons.ttf"
+	"path": "./fonts/all-the-icons.ttf",
+	"start-from": "0xE903",
+	"excludes": [ "0xFFFD" ]
+    },
+    {
+	"name": "devicons",
+	"path": "./fonts/devicons.ttf",
+	"start-from": "0xE600",
+	"excludes": [ "0xFFFD" ]
+    },
+    {
+	"name": "pomicons",
+	"path": "./fonts/Pomicons.ttf",
+	"start-from": "0xE000",
+	"excludes": [ "0x20", "0xA0" ]
+    },
+    {
+	"name": "linea-arrows",
+	"path": "./fonts/linea/linea-arrows-10.ttf",
+	"move-vertically": -200
+    },
+    {
+	"name": "linea-basic",
+	"path": "./fonts/linea/linea-basic-10.ttf",
+	"move-vertically": -200
+    },
+    {
+	"name": "linea-basic-elaboration",
+	"path": "./fonts/linea/linea-basic-elaboration-10.ttf",
+	"move-vertically": -200
+    },
+    {
+	"name": "linea-ecommerce",
+	"path": "./fonts/linea/linea-ecommerce-10.ttf",
+	"move-vertically": -200
+    },
+    {
+	"name": "linea-music",
+	"path": "./fonts/linea/linea-music-10.ttf",
+	"move-vertically": -200
+    },
+    {
+	"name": "linea-software",
+	"path": "./fonts/linea/linea-software-10.ttf",
+	"move-vertically": -200
+    },
+    {
+	"name": "linea-weather",
+	"path": "./fonts/linea/linea-weather-10.ttf",
+	"move-vertically": -200
     }
 ]
