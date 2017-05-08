@@ -18,7 +18,8 @@
     {
 	"name": "fileicons",
 	"path": "./fonts/file-icons.ttf",
-	"excludes": [ "0x20" ]
+	"excludes": [ "0x20" ],
+	"move-vertically": -100
     },
     {
 	"name": "weather",
