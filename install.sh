@@ -15,3 +15,6 @@ cp ./build/icons-in-terminal.ttf ~/.fonts/
 mkdir -p ~/.config/fontconfig/conf.d
 cp ./sample/icons.conf ~/.config/fontconfig/conf.d/
 fc-cache -fvr --really-force ~/.fonts
+set +xe
+
+echo "Font successfully installed. Now start a new terminal and run print_icons.sh :)"
