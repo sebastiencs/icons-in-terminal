@@ -15,6 +15,7 @@ You can add as many fonts as you want easily, you just need the ttf/odf file and
 [**Integrations**](#integrations)  
 [**- fish-shell integration**](#fish-integration)  
 [**- bash integration**](#bash-integration)  
+[**- emacs integration**](#emacs-integration)  
 [**Todos**](#todos)  
 
 ## Installation
@@ -104,6 +105,14 @@ source ~/.config/icons_bash.sh
 Restart a terminal, now you can print any icons with its name:  
 ```bash
 $ echo -e $oct_location
+```
+
+### Emacs integration
+
+Copy the file `build/icons-in-terminal.el` in your load-path.  
+```el
+(require 'icons-in-terminal)
+(insert (icons-in-terminal 'oct_flame))
 ```
 
 ## Todos

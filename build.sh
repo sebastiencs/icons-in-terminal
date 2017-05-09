@@ -6,6 +6,7 @@ mkdir -p ./build
 ./scripts/generate_font.py ./config.json > ./build/mapping.txt
 ./scripts/inte_fish.sh > ./build/icons.fish
 ./scripts/inte_bash.sh > ./build/icons_bash.sh
+./scripts/inte_emacs.sh > ./build/icons-in-terminal.el
 chmod +x ./build/icons.fish
 chmod +x ./build/icons_bash.sh
 mv icons-in-terminal.ttf ./build/
