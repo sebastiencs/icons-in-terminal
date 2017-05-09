@@ -29,7 +29,7 @@ You can see names of each icon by giving any parameter to `print_icons.sh`:
 ```bash
 $ ./print_icons.sh --names
 ```
-To use icons in your terminal, do not copy-paste icons from the output of `print_icons.sh` but use variable. See [integration](#integration).  
+To use icons in your terminal, do not copy-paste icons from the output of `print_icons.sh` but use variable. See [integrations](#integrations).  
 When one of the font provided will be update and add new icons, all the codepoints in `icons-in-terminal.ttf` will be changed. The variable won't.  
 
 ## Building
@@ -39,7 +39,7 @@ If you want to add new font, there are a few dependencies to install:
 - Python 3
 - [fontforge (with python extension)](https://fontforge.github.io)
 
-You can add the name and path of you font to the file `config.json`.  
+You can add the name and path of your font to the file `config.json`.  
 You should add it at the end of `config.json` to avoid to shift all codepoints of the others font.  
 Each font can take parameters:  
 - `start-from`: exclude all glyphs before the given codepoint.
@@ -60,7 +60,8 @@ The file `icons.conf` tells to freetype to search the glyph in `icons-in-termina
 
 ## Included icons
 
-There are already 3481 glyphs included.  
+There are already 3481 glyphs included:  
+
 [powerline-extra-symbols (commit 4eae6e8)](https://github.com/ryanoasis/powerline-extra-symbols)  
 [octicons v4.4.0](https://octicons.github.com/)  
 [fontawesome v4.7](http://fontawesome.io/)  
@@ -87,7 +88,7 @@ Then add this line to `~/.config/fish/config.fish`:
 ```bash
 source ~/.config/fish/icons.fish
 ```
-Restart a terminal and now you can print any icons with its name:  
+Restart a terminal, now you can print any icons with its name:  
 ```bash
 $ echo $oct_location
 ```
