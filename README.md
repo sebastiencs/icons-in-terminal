@@ -13,7 +13,7 @@ You can add as many fonts as you want easily, you just need the ttf/odf file and
 [**Included icons**](#included-icons)  
 [**Screenshots**](#screenshots)  
 [**Integrations**](#integrations)  
-  * [**fish-shell integration**](#fish-integration)  
+[**- fish-shell integration**](#fish-integration)  
 [**Todos**](#todos)  
 
 ## Installation
@@ -74,7 +74,7 @@ There are already 3481 glyphs included:
 [Pomicons (commit bb0a579)](https://github.com/gabrielelana/pomicons)  
 [linea v1.0](http://linea.io/)  
 
-## Screenshot
+## Screenshots
 
 ![Screenshot the included icons](image/icons.jpg)
 ![Screenshot with fish](image/icons-fish.jpg)
