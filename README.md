@@ -83,7 +83,7 @@ There are already 3481 glyphs included:
 
 ### Fish integration
 
-To use icons with fish, you just need to copy `build/icons.fish` in your `~/.config/fish/` directory.  
+To use icons with fish, you just need to copy the file `build/icons.fish` in your `~/.config/fish/` directory.  
 Then add this line to `~/.config/fish/config.fish`:  
 ```bash
 source ~/.config/fish/icons.fish
