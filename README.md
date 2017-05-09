@@ -90,7 +90,7 @@ source ~/.config/fish/icons.fish
 ```
 Restart a terminal, now you can print any icons with its name:  
 ```bash
-$ echo $oct_location
+$ echo -e $oct_location
 ```
 
 ## Todos
