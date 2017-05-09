@@ -14,6 +14,7 @@ You can add as many fonts as you want easily, you just need the ttf/odf file and
 [**Screenshots**](#screenshots)  
 [**Integrations**](#integrations)  
 [**- fish-shell integration**](#fish-integration)  
+[**- bash integration**](#bash-integration)  
 [**Todos**](#todos)  
 
 ## Installation
@@ -87,6 +88,18 @@ To use icons with fish, you just need to copy the file `build/icons.fish` in you
 Then add this line to `~/.config/fish/config.fish`:  
 ```bash
 source ~/.config/fish/icons.fish
+```
+Restart a terminal, now you can print any icons with its name:  
+```bash
+$ echo -e $oct_location
+```
+
+### Bash integration
+
+Copy the file `build/icons_bash.sh` in your `~/.config/` directory.  
+Then add this line to your .bashrc:  
+```bash
+source ~/.config/icons_bash.sh
 ```
 Restart a terminal, now you can print any icons with its name:  
 ```bash
