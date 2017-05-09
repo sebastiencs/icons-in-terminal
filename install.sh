@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cat ./sample/icons.conf | grep '<family>YOUR_TERMINAL_FONT</family>' > /dev/null
+grep '<family>YOUR_TERMINAL_FONT</family>' ./sample/icons.conf > /dev/null
 if [ $? -eq 0 ]
 then
     echo "Please change the text YOUR_TERMINAL_FONT in sample/icons.conf."

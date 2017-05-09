@@ -2,55 +2,58 @@
 
 ## Overview
 
-`icons-in-terminal` allows you to get any font in your terminal without replacing or patching your font.  
-You can add as many fonts as you want, modify the file `config.json` to add its name and the path of the ttf file.  
+`icons-in-terminal` allows you to get any fonts in your terminal without replacing or patching your font.  
+You can add as many fonts as you want easily, you just need the ttf/odf file and add it to `config.json`.  
 
-# Dependencies
+## Install
+
+To install the font, you need to modify `sample/icons.conf` and replace `YOUR_TERMINAL_FONT` with the name of your terminal font, for example "Droid Sans Mono".  
+Then you can run:  
+
+```bash
+$ ./install.sh
+```
+Done ! You can start a new terminal and run `print_icons.sh` to see the installed gryphs.  
+
+## Building
+
+If you want to add new font, there are a few dependencies to install:  
 
 - Python 3
 - [fontforge (with python extension)](https://fontforge.github.io)
 
-## Install
+You can add the name and path of you font to the file `config.json`.  
+You should add it at the end of `config.json` to avoid to shift all codepoints of the others font.  
+Each font can take parameters:  
+- `start-from`: exclude all glyphs before the given codepoint.
+- `until`: exclude all glyphs at the given codepoint and after.
+- `excludes`: exclude the given codepoints.
+- `move-vertically`: Use this parameter if your font and its glyphs are not centered vertically.
 
+Once done, you can run:  
 ```bash
-$ generate-fonts.py config.json
-$ mkdir -p ~/.fonts
-$ cp myicons.ttf ~/.fonts/
-$ mkdir -p ~/.config/fontconfig/conf.d
-$ cp sample/icons.conf ~/.config/fontconfig/conf.d
+$ ./build.sh
 ```
-Then you have to modify `~/.config/fontconfig/conf.d` to replace `YOUR_TERMINAL_FONT` with the name of your terminal font, for example "Droid Sans Mono for Powerline".  
-And finally:  
-```bash
-$ fc-cache -fvr --really-force ~/.fonts
-```
-You have to save the output of generate-fonts.py, the numbers are the codepoints attributed to each icon.  
-For example, if I want to use the icon `ticket` from fontawesome, I check this line:  
-`fontawesome: ticket : 0xe1ea`
-To use it (fish doesn't interpret the code, if you use fish, run this code with bash instead):  
-```bash
-$ echo -e "\ue1ea"
-```
-To see all your icons, you can run a script to loop over each icon (it starts at 0xe000).  
-Even if you rerun generate-fonts.py, the codepoints won't change, unless you modify config.json.  
-If you want to add a font, add it at the end of config.json to not modify all the codepoints.  
-If you modify config.json and see that icons are not printed properly, it's because (I guess) your system cached the font. To be sure reboot you system (but it shouldn't be necessary) or resize your terminal (zoom) to force the font's reload.
-
 ## How it works
 
-This project is inspired by [awesome-terminal-fonts](https://github.com/gabrielelana/awesome-terminal-fonts) but different.  
-I don't modify any existing fonts, I create a new one and insert each icon founds in the provided fonts in the [private use areas](https://en.wikipedia.org/wiki/Private_Use_Areas).  
-The file `icons.conf` tells to freetype to search the font in `myicons.ttf` if it fails in your default font file. As the codepoints generated are in the private use areas, freetype should always fail and fallback to myicons.ttf
+This project is inspired by [awesome-terminal-fonts](https://github.com/gabrielelana/awesome-terminal-fonts) but is different.  
+I don't modify any existing font, I create a new one and insert each glyphs from the provided fonts in the [private use areas](https://en.wikipedia.org/wiki/Private_Use_Areas).  
+The file `icons.conf` tells to freetype to search the glyph in `icons-in-terminal.ttf` if it fails in your default font file. As the codepoints generated are in the private use areas, freetype should always fail and fallback to icons-in-terminal.ttf  
 
 ## Included icons
 
+There are already 3481 glyphs included.  
+[powerline-extra-symbols (commit 4eae6e8)](https://github.com/ryanoasis/powerline-extra-symbols)  
 [octicons v4.4.0](https://octicons.github.com/)  
-[fontawesome](http://fontawesome.io/)  
-[material-design-icons](https://github.com/google/material-design-icons)  
-[file-icons](https://atom.io/packages/file-icons)  
-[weather-icons](https://erikflowers.github.io/weather-icons/)  
-[font-linux](https://github.com/Lukas-W/font-linux)  
+[fontawesome v4.7](http://fontawesome.io/)  
+[material-design-icons v3.0.1](https://github.com/google/material-design-icons)  
+[file-icons v2.1.4](https://atom.io/packages/file-icons)  
+[weather-icons v2.0.10](https://erikflowers.github.io/weather-icons/)  
+[font-linux v0.9](https://github.com/Lukas-W/font-linux)  
 [all-the-icons](https://github.com/domtronn/all-the-icons.el)  
+[devicons v1.8.0](https://github.com/vorillaz/devicons)  
+[Pomicons (commit bb0a579)](https://github.com/gabrielelana/pomicons)  
+[linea v1.0](http://linea.io/)  
 
 ## Screenshot
 
@@ -58,9 +61,4 @@ The file `icons.conf` tells to freetype to search the font in `myicons.ttf` if i
 
 ## Todos
 
-- Improve the poor script
-- Save the generated codepoints somewhere
-- Be able to shift glyph (material-design-icons are not really centered, compare to the other)
-- More documentation
-- Be able to resize fonts (Some could find it too small)
-- Integrate with differents shells (By creating variable maybe ?)
+- Integrate with differents shells (By creating variable ?)
