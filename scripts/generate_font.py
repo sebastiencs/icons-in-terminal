@@ -49,11 +49,11 @@ def is_default_name(name):
         return False
     return True
 
-# If the name is a default one, return a new default name corresponding to its codepoint
-def make_name(name, codepoint):
+# Name the glyph according to the font name
+def make_name(name, codepoint, name_font):
     if is_default_name(name):
-        return "uni" + str(hex(codepoint)).replace("0x", "").upper()
-    return name
+        return name_font + "_" + name[-4:]
+    return name_font + "_" + name.replace("-", "_")
 
 if len(sys.argv) < 2:
     print("Give me a config file", file=sys.stderr)
@@ -92,6 +92,11 @@ with open(sys.argv[1]) as config_file:
         if "move-vertically" in json_file:
             move_vertically = int(json_file["move-vertically"])
 
+        name_font = json_file["name"]
+        if "short-name" in json_file:
+            name_font = json_file["short-name"]
+        name_font = name_font.replace("-", "_")
+
         start = codepoint
         inserted = []
 
@@ -110,7 +115,7 @@ with open(sys.argv[1]) as config_file:
                 dest.selection.select(codepoint)
                 dest.paste()
                 dest.transform(psMat.translate(0, move_vertically))
-                new_name = make_name(name, codepoint)
+                new_name = make_name(name, codepoint, name_font)
                 dest.createMappedChar(codepoint).glyphname = new_name
                 inserted.append((new_name ,codepoint))
                 codepoint += 1
