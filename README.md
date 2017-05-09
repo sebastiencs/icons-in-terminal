@@ -5,7 +5,18 @@
 `icons-in-terminal` allows you to get any fonts in your terminal without replacing or patching your font.  
 You can add as many fonts as you want easily, you just need the ttf/odf file and add it to `config.json`.  
 
-## Install
+## Table of Contents
+
+[**Installation**](#installation)
+[**Building**](#building)
+[**How it works**](#how-it-works)
+[**Included icons**](#included-icons)
+[**Screenshots**](#screenshots)
+[**Integrations**](#integrations)
+  * [**fish-shell integration**](#fish-integration)
+[**Todos**](#todos)
+
+## Installation
 
 To install the font, you need to modify `sample/icons.conf` and replace `YOUR_TERMINAL_FONT` with the name of your terminal font, for example "Droid Sans Mono".  
 Then you can run:  
@@ -14,6 +25,12 @@ Then you can run:
 $ ./install.sh
 ```
 Done ! You can start a new terminal and run `print_icons.sh` to see the installed gryphs.  
+You can see names of each icon by giving any parameter to `print_icons.sh`:  
+```bash
+$ ./print_icons.sh --names
+```
+To use icons in your terminal, do not copy-paste icons from the output of `print_icons.sh` but use variable. See [integration](#integration).  
+When one of the font provided will be update and add new icons, all the codepoints in `icons-in-terminal.ttf` will be changed. The variable won't.  
 
 ## Building
 
@@ -58,7 +75,22 @@ There are already 3481 glyphs included.
 ## Screenshot
 
 ![Screenshot the included icons](image/icons.jpg)
+![Screenshot with fish](image/icons-fish.jpg)
+
+## Integrations
+
+### Fish integration
+
+To use icons with fish, you just need to copy `build/icons.fish` in your `~/.config/fish/` directory.  
+Then add this line to `~/.config/fish/config.fish`:  
+```bash
+source ~/.config/fish/icons.fish
+```
+Restart a terminal and now you can print any icons with its name:  
+```bash
+$echo $oct_location
+```
 
 ## Todos
 
-- Integrate with differents shells (By creating variable ?)
+- Integrate with differents shells
