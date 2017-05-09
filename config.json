@@ -1,22 +1,26 @@
 [
     {
 	"name": "octicons",
+	"short-name": "oct",
 	"path": "./fonts/octicons.ttf"
     },
     {
 	"name": "fontawesome",
+	"short-name": "fa",
 	"path": "./fonts/FontAwesome.otf",
 	"start-from": "0xF000",
 	"until": "0xF2B5"
     },
     {
 	"name": "material",
+	"short-name": "md",
 	"path": "./fonts/material-design-icons.ttf",
 	"start-from": "0xE000",
 	"move-vertically": -150
     },
     {
 	"name": "fileicons",
+	"short-name": "filei",
 	"path": "./fonts/file-icons.ttf",
 	"excludes": [ "0x20" ],
 	"move-vertically": -100
@@ -28,6 +32,7 @@
     },
     {
 	"name": "linux",
+	"short-name": "linux",
 	"path": "./fonts/font-linux.ttf",
 	"start-from": "0xF100"
     },
@@ -39,12 +44,14 @@
     },
     {
 	"name": "devicons",
+	"short-name": "dev",
 	"path": "./fonts/devicons.ttf",
 	"start-from": "0xE600",
 	"excludes": [ "0xFFFD" ]
     },
     {
 	"name": "pomicons",
+	"short-name": "pom",
 	"path": "./fonts/Pomicons.ttf",
 	"start-from": "0xE000",
 	"excludes": [ "0x20", "0xA0" ]
@@ -61,6 +68,7 @@
     },
     {
 	"name": "linea-basic-elaboration",
+	"short-name": "linea-elaboration",
 	"path": "./fonts/linea/linea-basic-elaboration-10.ttf",
 	"move-vertically": -200
     },
