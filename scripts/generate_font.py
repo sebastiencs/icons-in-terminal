@@ -42,11 +42,9 @@ def insert_powerline_extra(dest):
 # Return true if the format of the name is something like 'uniXXXX' where X are
 # hexadecimals
 def is_default_name(name):
-    if len(name) != 7:
-        return False
-    if not name.startswith("uni"):
-        return False
-    if not all(c in string.hexdigits for c in name[-4:]):
+    if (len(name) != 7 or
+        not name.startswith("uni") or
+        not all(c in string.hexdigits for c in name[-4:])):
         return False
     return True
 
