@@ -7,14 +7,14 @@ You can add as many fonts as you want easily, you just need the ttf/odf file and
 
 ## Table of Contents
 
-[**Installation**](#installation)
-[**Building**](#building)
-[**How it works**](#how-it-works)
-[**Included icons**](#included-icons)
-[**Screenshots**](#screenshots)
-[**Integrations**](#integrations)
-  * [**fish-shell integration**](#fish-integration)
-[**Todos**](#todos)
+[**Installation**](#installation)  
+[**Building**](#building)  
+[**How it works**](#how-it-works)  
+[**Included icons**](#included-icons)  
+[**Screenshots**](#screenshots)  
+[**Integrations**](#integrations)  
+  * [**fish-shell integration**](#fish-integration)  
+[**Todos**](#todos)  
 
 ## Installation
 
@@ -46,6 +46,7 @@ Each font can take parameters:
 - `until`: exclude all glyphs at the given codepoint and after.
 - `excludes`: exclude the given codepoints.
 - `move-vertically`: Use this parameter if your font and its glyphs are not centered vertically.
+- `short-name`: Prefix to insert before the glyph name when you want to use the icon in your shell or anywhere else
 
 Once done, you can run:  
 ```bash
@@ -88,7 +89,7 @@ source ~/.config/fish/icons.fish
 ```
 Restart a terminal and now you can print any icons with its name:  
 ```bash
-$echo $oct_location
+$ echo $oct_location
 ```
 
 ## Todos
