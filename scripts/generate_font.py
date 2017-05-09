@@ -35,7 +35,8 @@ def insert_powerline_extra(dest):
         codepoint += 1
     print("#powerline-extras:" + str(len(inserted)))
     for x in inserted:
-        print("powerline:" + str(hex(x)).replace("0x", ""), end=';')
+        name = hex(x).replace("0x", "")
+        print("powerline_" + name.upper() + ":" + name, end=';')
     print("")
 
 # Return true if the format of the name is something like 'uniXXXX' where X are
