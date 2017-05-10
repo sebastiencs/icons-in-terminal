@@ -49,6 +49,7 @@ Each font can take parameters:
 - `excludes`: exclude the given codepoints.
 - `move-vertically`: Use this parameter if your font and its glyphs are not centered vertically.
 - `short-name`: Prefix to insert before the glyph name when you want to use the icon in your shell or anywhere else
+- `map-names`: Define a name to the glyph. If not provided, the name will be read from the ttf file
 
 Once done, you can run:  
 ```bash
@@ -92,7 +93,7 @@ source ~/.config/fish/icons.fish
 ```
 Restart a terminal, now you can print any icons with its name:  
 ```bash
-$ echo -e $oct_location
+$ echo $oct_location
 ```
 
 ### Bash integration
@@ -104,7 +105,7 @@ source ~/.config/icons_bash.sh
 ```
 Restart a terminal, now you can print any icons with its name:  
 ```bash
-$ echo -e $oct_location
+$ echo -e $oct_location # note the '-e'
 ```
 
 ### Emacs integration
