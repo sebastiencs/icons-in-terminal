@@ -16,6 +16,7 @@
 	"short-name": "md",
 	"path": "./fonts/material-design-icons.ttf",
 	"start-from": "0xE000",
+	"codepoints_names": "./fonts/material-design-codepoints",
 	"move-vertically": -150
     },
     {

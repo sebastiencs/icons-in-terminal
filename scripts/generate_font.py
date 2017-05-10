@@ -39,6 +39,22 @@ def insert_powerline_extra(dest):
         print("powerline_" + name.upper() + ":" + name, end=';')
     print("")
 
+def read_codepoints_names(filename):
+    array = []
+    with open(filename) as file_codepoint:
+        lines = file_codepoint.readlines()
+        lines = [x.strip() for x in lines]
+        for line in lines:
+            tab = line.split()
+            array.append((tab[0], int(tab[1], 16)))
+    return array
+
+def lookup_codepoint_name(codepoint_names, codepoint, fallback_name):
+    for name, code in codepoint_names:
+        if code == codepoint:
+            return name
+    return fallback_name
+
 # Return true if the format of the name is something like 'uniXXXX' where X are
 # hexadecimals
 def is_default_name(name):
@@ -49,7 +65,7 @@ def is_default_name(name):
     return True
 
 # Name the glyph according to the font name
-def make_name(name, codepoint, name_font):
+def make_name(name, name_font):
     if is_default_name(name):
         return name_font + "_" + name[-4:]
     return name_font + "_" + name.replace("-", "_")
@@ -96,6 +112,10 @@ with open(sys.argv[1]) as config_file:
             name_font = json_file["short-name"]
         name_font = name_font.replace("-", "_")
 
+        codepoint_names = []
+        if "codepoints_names" in json_file:
+            codepoint_names = read_codepoints_names(json_file["codepoints_names"])
+
         start = codepoint
         inserted = []
 
@@ -114,7 +134,9 @@ with open(sys.argv[1]) as config_file:
                 dest.selection.select(codepoint)
                 dest.paste()
                 dest.transform(psMat.translate(0, move_vertically))
-                new_name = make_name(name, codepoint, name_font)
+                if len(codepoint_names) > 0:
+                    name = lookup_codepoint_name(codepoint_names, encoding, name)
+                new_name = make_name(name, name_font)
                 dest.createMappedChar(codepoint).glyphname = new_name
                 inserted.append((new_name ,codepoint))
                 codepoint += 1
