@@ -40,7 +40,7 @@ def insert_powerline_extra(dest):
     codepoint = POWERLINE_START
     font = fontforge.open("./fonts/PowerlineExtraSymbols.otf")
     font.em = FONT_EM
-    codepoint_names = read_map_names("./fonts/PowerlineExtraSymbols-codepoints")
+    map_names = read_map_names("./fonts/PowerlineExtraSymbols-map")
     excludes = [ 0xE0A4, 0xE0A5, 0xE0A6, 0xE0A7, 0xE0A8, 0xE0A9, 0xE0AA, 0xE0AB,
                  0xE0AC, 0xE0AD, 0xE0AE, 0xE0AF, 0xE0C9, 0xE0CB, 0xE0D3 ]
     inserted = []
@@ -58,7 +58,7 @@ def insert_powerline_extra(dest):
     print("#powerline-extras:" + str(len(inserted)))
     for x in inserted:
         number = hex(x).replace("0x", "")
-        name = lookup_map_name(codepoint_names, x, number)
+        name = lookup_map_name(map_names, x, number)
         print("powerline_" + name + ":" + number, end=';')
     print("")
 
