@@ -13,12 +13,34 @@ FONT_EM = 1024
 POWERLINE_START = 0xE0A0
 POWERLINE_END = 0xE0D5
 
+def read_map_names(filename):
+    array = []
+    with open(filename) as file_map:
+        lines = file_map.readlines()
+        lines = [x.strip() for x in lines]
+        for line in lines:
+            if len(line) == 0:
+                continue
+            tab = line.split()
+            if tab[0][0] == '@':
+                array.append((tab[0][1:], ord(tab[1][0])))
+            else:
+                array.append((tab[0], int(tab[1], 16)))
+    return array
+
+def lookup_map_name(map_names, codepoint, fallback_name):
+    for name, code in map_names:
+        if code == codepoint:
+            return name
+    return fallback_name
+
 # Insert the powerline glyphs at the same place that all the patched powerline fonts to make
 # our font compatible with most of plugins/modules that insert those glyphs
 def insert_powerline_extra(dest):
     codepoint = POWERLINE_START
     font = fontforge.open("./fonts/PowerlineExtraSymbols.otf")
     font.em = FONT_EM
+    codepoint_names = read_map_names("./fonts/PowerlineExtraSymbols-codepoints")
     excludes = [ 0xE0A4, 0xE0A5, 0xE0A6, 0xE0A7, 0xE0A8, 0xE0A9, 0xE0AA, 0xE0AB,
                  0xE0AC, 0xE0AD, 0xE0AE, 0xE0AF, 0xE0C9, 0xE0CB, 0xE0D3 ]
     inserted = []
@@ -35,25 +57,10 @@ def insert_powerline_extra(dest):
         codepoint += 1
     print("#powerline-extras:" + str(len(inserted)))
     for x in inserted:
-        name = hex(x).replace("0x", "")
-        print("powerline_" + name.upper() + ":" + name, end=';')
+        number = hex(x).replace("0x", "")
+        name = lookup_map_name(codepoint_names, x, number)
+        print("powerline_" + name + ":" + number, end=';')
     print("")
-
-def read_codepoints_names(filename):
-    array = []
-    with open(filename) as file_codepoint:
-        lines = file_codepoint.readlines()
-        lines = [x.strip() for x in lines]
-        for line in lines:
-            tab = line.split()
-            array.append((tab[0], int(tab[1], 16)))
-    return array
-
-def lookup_codepoint_name(codepoint_names, codepoint, fallback_name):
-    for name, code in codepoint_names:
-        if code == codepoint:
-            return name
-    return fallback_name
 
 # Return true if the format of the name is something like 'uniXXXX' where X are
 # hexadecimals
@@ -66,6 +73,7 @@ def is_default_name(name):
 
 # Name the glyph according to the font name
 def make_name(name, name_font):
+    name = name.lower()
     if is_default_name(name):
         return name_font + "_" + name[-4:]
     return name_font + "_" + name.replace("-", "_")
@@ -112,9 +120,9 @@ with open(sys.argv[1]) as config_file:
             name_font = json_file["short-name"]
         name_font = name_font.replace("-", "_")
 
-        codepoint_names = []
-        if "codepoints_names" in json_file:
-            codepoint_names = read_codepoints_names(json_file["codepoints_names"])
+        map_names = []
+        if "map-names" in json_file:
+            map_names = read_map_names(json_file["map-names"])
 
         start = codepoint
         inserted = []
@@ -134,8 +142,8 @@ with open(sys.argv[1]) as config_file:
                 dest.selection.select(codepoint)
                 dest.paste()
                 dest.transform(psMat.translate(0, move_vertically))
-                if len(codepoint_names) > 0:
-                    name = lookup_codepoint_name(codepoint_names, encoding, name)
+                if len(map_names) > 0:
+                    name = lookup_map_name(map_names, encoding, name)
                 new_name = make_name(name, name_font)
                 dest.createMappedChar(codepoint).glyphname = new_name
                 inserted.append((new_name ,codepoint))
