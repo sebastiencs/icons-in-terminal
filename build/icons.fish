@@ -1780,7 +1780,7 @@ set -g md_smoking_rooms \ue701
 set -g md_spa \ue702
 set -g md_u10fffd \ue703
 set -g file_regex \ue704
-set -g file_a \ue705
+set -g file_arch_linux \ue705
 set -g file_e \ue706
 set -g file_glyphs \ue707
 set -g file_knockout \ue708

@@ -13,7 +13,7 @@ set -xe
 mkdir -p ~/.fonts
 cp ./build/icons-in-terminal.ttf ~/.fonts/
 mkdir -p ~/.config/fontconfig/conf.d
-cp ./sample/icons.conf ~/.config/fontconfig/conf.d/
+cp ./sample/icons.conf ~/.config/fontconfig/conf.d/20-icons.conf
 fc-cache -fvr --really-force ~/.fonts
 set +xe
 

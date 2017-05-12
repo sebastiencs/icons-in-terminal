@@ -1784,7 +1784,7 @@
     ( md_spa . "\xe702" )
     ( md_u10fffd . "\xe703" )
     ( file_regex . "\xe704" )
-    ( file_a . "\xe705" )
+    ( file_arch_linux . "\xe705" )
     ( file_e . "\xe706" )
     ( file_glyphs . "\xe707" )
     ( file_knockout . "\xe708" )
