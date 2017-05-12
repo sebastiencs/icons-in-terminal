@@ -34,6 +34,7 @@ Done ! You can start a new terminal and run `print_icons.sh` to see the installe
 You can see names of each icon by giving any parameter to `print_icons.sh`:  
 ```bash
 $ ./print_icons.sh --names
+$ ./print_icons.sh --names | grep color
 ```
 To use icons in your terminal, do not copy-paste icons from the output of `print_icons.sh` but use variable. See [integrations](#integrations).  
 When one of the font provided will be update and add new icons, all the codepoints in `icons-in-terminal.ttf` will be changed. The variable won't.  
@@ -64,6 +65,7 @@ $ ./build.sh
 This project is inspired by [awesome-terminal-fonts](https://github.com/gabrielelana/awesome-terminal-fonts) but is different.  
 I don't modify any existing font, I create a new one and insert each glyphs from the provided fonts in the [private use areas](https://en.wikipedia.org/wiki/Private_Use_Areas).  
 The file `icons.conf` tells to freetype to search the glyph in `icons-in-terminal.ttf` if it fails in your default font file. As the codepoints generated are in the private use areas, freetype should always fail and fallback to icons-in-terminal.ttf  
+The only requirement is that your default font shouldn't be already patched/modified. But why use a patched font with limited glyphs when they are all included here :)  
 
 ## Included icons
 
