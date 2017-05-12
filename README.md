@@ -63,7 +63,7 @@ The file `icons.conf` tells to freetype to search the glyph in `icons-in-termina
 
 ## Included icons
 
-There are already 3481 glyphs included:  
+There are already 3618 glyphs included:  
 
 [powerline-extra-symbols (commit 4eae6e8)](https://github.com/ryanoasis/powerline-extra-symbols)  
 [octicons v4.4.0](https://octicons.github.com/)  
@@ -76,6 +76,7 @@ There are already 3481 glyphs included:
 [devicons v1.8.0](https://github.com/vorillaz/devicons)  
 [Pomicons (commit bb0a579)](https://github.com/gabrielelana/pomicons)  
 [linea v1.0](http://linea.io/)  
+[font-mfizz v2.4.1](https://github.com/fizzed/font-mfizz)  
 
 ## Screenshots
 

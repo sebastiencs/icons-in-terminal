@@ -22,7 +22,7 @@
     },
     {
 	"name": "fileicons",
-	"short-name": "filei",
+	"short-name": "file",
 	"path": "./fonts/file-icons.ttf",
 	"map-names": "fonts/file-icons-map",
 	"excludes": [ "0x20" ],
@@ -104,5 +104,11 @@
 	"path": "./fonts/linea/linea-weather-10.ttf",
 	"map-names": "./fonts/linea/linea-weather-10-map",
 	"move-vertically": -200
+    },
+    {
+	"name": "mfizz",
+	"path": "./fonts/font-mfizz.ttf",
+	"map-names": "./fonts/font-mfizz-map",
+	"excludes": [ "0x20" ]
     }
 ]
