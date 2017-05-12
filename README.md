@@ -20,6 +20,10 @@ You can add as many fonts as you want easily, you just need the ttf/odf file and
 
 ## Installation
 
+```bash
+$ git clone https://github.com/sebastiencs/icons-in-terminal.git
+```
+
 To install the font, you need to modify `sample/icons.conf` and replace `YOUR_TERMINAL_FONT` with the name of your terminal font, for example "Droid Sans Mono".  
 Then you can run:  
 
