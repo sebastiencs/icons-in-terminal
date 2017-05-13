@@ -7,16 +7,16 @@ You can add as many fonts as you want easily, you just need the ttf/odf file and
 
 ## Table of Contents
 
-[**Installation**](#installation)  
-[**Building**](#building)  
-[**How it works**](#how-it-works)  
-[**Included icons**](#included-icons)  
-[**Screenshots**](#screenshots)  
-[**Integrations**](#integrations)  
-[**- fish-shell integration**](#fish-integration)  
-[**- bash integration**](#bash-integration)  
-[**- emacs integration**](#emacs-integration)  
-[**Todos**](#todos)  
+1. [**Installation**](#installation)  
+2. [**Building**](#building)  
+3. [**How it works**](#how-it-works)  
+4. [**Included icons**](#included-icons)  
+5. [**Screenshots**](#screenshots)  
+6. [**Integrations**](#integrations)  
+  * [**fish-shell**](#fish-integration)  
+  * [**bash**](#bash-integration)  
+  * [**emacs**](#emacs-integration)  
+7. [**Todos**](#todos)  
 
 ## Installation
 
