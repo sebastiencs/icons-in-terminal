@@ -13,9 +13,9 @@ You can add as many fonts as you want easily, you just need the ttf/odf file and
 4. [**Included icons**](#included-icons)  
 5. [**Screenshots**](#screenshots)  
 6. [**Integrations**](#integrations)  
-  * [**fish-shell**](#fish-integration)  
-  * [**bash**](#bash-integration)  
-  * [**emacs**](#emacs-integration)  
+    * [**fish-shell**](#fish-integration)  
+    * [**bash**](#bash-integration)  
+    * [**emacs**](#emacs-integration)  
 7. [**Todos**](#todos)  
 
 ## Installation
