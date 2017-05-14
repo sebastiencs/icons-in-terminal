@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ./scripts/colors.sh
+
 set -xe
 
 mkdir -p ~/.fonts
@@ -19,5 +21,8 @@ cp ./build/* $DATA
 
 set +xe
 
-echo -e "\nBuilt files copied in $DATA (just to keep them safe)"
-echo "Font successfully installed. Now start a new terminal and run print_icons.sh :)"
+#echo -e "\nBuilt files copied in $DATA (don't delete them, others programs may need them)"
+echo -e "\n${YELLOW}Recommended additional step:"
+echo "Edit ~/.config/fontconfig/conf.d/20-icons.conf"
+echo "Check that the font(s) you are using in your terminal(s) is listed and remove all the others lines"
+echo -e "\n${NORMAL}Font successfully installed. Now start a new terminal and run print_icons.sh :)"

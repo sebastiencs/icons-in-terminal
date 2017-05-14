@@ -33,5 +33,4 @@ set +xe
 
 VERBOSE=1 ./scripts/generate_fontconfig_autodetect.sh
 
-echo -e "\nBuilt files copied in $DATA (just to keep them safe)"
-echo "Font successfully installed. Now start a new terminal and run print_icons.sh :)"
+echo -e "\nFont successfully installed. Now start a new terminal and run print_icons.sh :)"
