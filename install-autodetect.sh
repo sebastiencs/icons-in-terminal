@@ -14,10 +14,10 @@ set -xe
 mkdir -p ~/.fonts
 cp ./build/icons-in-terminal.ttf ~/.fonts/
 mkdir -p ~/.config/fontconfig/conf.d
-cp ./sample/icons.conf ~/.config/fontconfig/conf.d/20-icons.conf
+cp ./sample/icons.conf ~/.config/fontconfig/conf.d/30-icons.conf
 
-./scripts/generate_fontconfig_autodetect.sh > ~/.config/fontconfig/conf.d/20-icons.conf
-#./scripts/generate_fontconfig.sh > ~/.config/fontconfig/conf.d/20-icons.conf
+./scripts/generate_fontconfig_autodetect.sh > ~/.config/fontconfig/conf.d/30-icons.conf
+#./scripts/generate_fontconfig.sh > ~/.config/fontconfig/conf.d/30-icons.conf
 
 fc-cache -fvr --really-force ~/.fonts
 
