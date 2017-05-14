@@ -24,11 +24,13 @@ You can add as many fonts as you want easily, you just need the ttf/odf file and
 $ git clone https://github.com/sebastiencs/icons-in-terminal.git
 ```
 
-To install the font, you need to modify `sample/icons.conf` and replace `YOUR_TERMINAL_FONT` with the name of your terminal font, for example "Droid Sans Mono".  
-Then you can run:  
-
+To install `icons-in-terminal`, run:  
 ```bash
-$ ./install.sh
+$ ./install.sh  
+```
+Or if your terminal is [supported](https://github.com/sebastiencs/icons-in-terminal/issues/1) (Experimental)
+```bash
+$ ./install-autodetect.sh 
 ```
 Done ! You can start a new terminal and run `print_icons.sh` to see the installed gryphs.  
 You can see names of each icon by giving any parameter to `print_icons.sh`:  
