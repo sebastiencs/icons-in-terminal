@@ -35,6 +35,7 @@ $ ./install-autodetect.sh
 Done ! You can start a new terminal and run `print_icons.sh` to see the installed gryphs.  
 You can see names of each icon by giving any parameter to `print_icons.sh`:  
 ```bash
+$ ./print_icons.sh
 $ ./print_icons.sh --names
 $ ./print_icons.sh --names | grep ANY_NAME
 ```
@@ -66,7 +67,7 @@ $ ./build.sh
 
 This project is inspired by [awesome-terminal-fonts](https://github.com/gabrielelana/awesome-terminal-fonts) but is different.  
 I don't modify any existing font, I create a new one and insert each glyphs from the provided fonts in the [private use areas](https://en.wikipedia.org/wiki/Private_Use_Areas).  
-The file `icons.conf` tells to freetype to search the glyph in `icons-in-terminal.ttf` if it fails in your default font file. As the codepoints generated are in the private use areas, freetype should always fail and fallback to icons-in-terminal.ttf  
+The file `~/.config/fontconfig/conf.d/30-icons.conf` tells to freetype to search the glyph in `icons-in-terminal.ttf` if it fails in your default font file. As the codepoints generated are in the private use areas, freetype should always fail and fallback to icons-in-terminal.ttf  
 The only requirement is that your default font shouldn't be already patched/modified. But why use a patched font with limited glyphs when they are all included here :)  
 
 ## Included icons
