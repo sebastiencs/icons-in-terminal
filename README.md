@@ -95,7 +95,10 @@ There are already 3618 glyphs included:
 
 ### Fish integration
 
-To use icons with fish, you just need to copy the file `build/icons.fish` in your `~/.config/fish/` directory.  
+To use `icons-in-terminal` with fish, execute this line.  
+```bash
+$ ln -s ~/.local/share/icons-in-terminal/icons.fish ~/.config/fish/
+```
 Then add this line to `~/.config/fish/config.fish`:  
 ```bash
 source ~/.config/fish/icons.fish
@@ -107,7 +110,10 @@ $ echo $oct_location
 
 ### Bash integration
 
-Copy the file `build/icons_bash.sh` in your `~/.config/` directory.  
+Run:  
+```bash
+$ ln -s ~/.local/share/icons-in-terminal/icons_bash.sh ~/.config/
+```
 Then add this line to your .bashrc:  
 ```bash
 source ~/.config/icons_bash.sh
@@ -119,7 +125,7 @@ $ echo -e $oct_location # note the '-e'
 
 ### Emacs integration
 
-Copy the file `build/icons-in-terminal.el` in your load-path.  
+Make a link of the file `~/.local/share/icons-in-terminal/icons-in-terminal.el` in your load-path.  
 ```el
 (require 'icons-in-terminal)
 (insert (icons-in-terminal 'oct_flame))
