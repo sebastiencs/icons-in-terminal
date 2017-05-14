@@ -36,10 +36,10 @@ Done ! You can start a new terminal and run `print_icons.sh` to see the installe
 You can see names of each icon by giving any parameter to `print_icons.sh`:  
 ```bash
 $ ./print_icons.sh --names
-$ ./print_icons.sh --names | grep color
+$ ./print_icons.sh --names | grep ANY_NAME
 ```
 To use icons in your terminal, do not copy-paste icons from the output of `print_icons.sh` but use variable. See [integrations](#integrations).  
-When one of the font provided will be update and add new icons, all the codepoints in `icons-in-terminal.ttf` will be changed. The variable won't.  
+When one of the font provided will be update and add new icons, some codepoints in `icons-in-terminal.ttf` will be changed. The variable won't.  
 
 ## Building
 
