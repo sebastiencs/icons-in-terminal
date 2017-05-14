@@ -74,6 +74,22 @@ The only requirement is that your default font shouldn't be already patched/modi
 
 There are already 3618 glyphs included:  
 
+| Name                                                                             | Version        |
+| ---------------------------------------------------------------------------------|:--------------:|
+| [powerline-extra-symbols](https://github.com/ryanoasis/powerline-extra-symbols)  | commit 4eae6e8 |
+| [octicons](https://octicons.github.com/)                                         | 4.4.0          |
+| [fontawesome](http://fontawesome.io/)                                            | 4.7            |
+| [material-design-icons](https://github.com/google/material-design-icons)         | 3.0.1          |
+| [file-icons](https://atom.io/packages/file-icons)                                | 2.1.4          |
+| [weather-icons](https://erikflowers.github.io/weather-icons/)                    | 2.0.10         |
+| [font-linux](https://github.com/Lukas-W/font-linux)                              | 0.9            |
+| [all-the-icons](https://github.com/domtronn/all-the-icons.el)                    |                |
+| [devicons](https://github.com/vorillaz/devicons)                                 | 1.8.0          |
+| [Pomicons](https://github.com/gabrielelana/pomicons)                             | commit bb0a579 |
+| [linea](http://linea.io/)                                                        | 1.0            |
+| [font-mfizz](https://github.com/fizzed/font-mfizz)                               | 2.4.1          |
+
+
 [powerline-extra-symbols (commit 4eae6e8)](https://github.com/ryanoasis/powerline-extra-symbols)  
 [octicons v4.4.0](https://octicons.github.com/)  
 [fontawesome v4.7](http://fontawesome.io/)  
