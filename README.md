@@ -75,7 +75,7 @@ The only requirement is that your default font shouldn't be already patched/modi
 There are already 3618 glyphs included:  
 
 | Name                                                                             | Version        |
-| ---------------------------------------------------------------------------------|:--------------:|
+| ---------------------------------------------------------------------------------|---------------:|
 | [powerline-extra-symbols](https://github.com/ryanoasis/powerline-extra-symbols)  | commit 4eae6e8 |
 | [octicons](https://octicons.github.com/)                                         | 4.4.0          |
 | [fontawesome](http://fontawesome.io/)                                            | 4.7            |
@@ -89,20 +89,6 @@ There are already 3618 glyphs included:
 | [linea](http://linea.io/)                                                        | 1.0            |
 | [font-mfizz](https://github.com/fizzed/font-mfizz)                               | 2.4.1          |
 
-
-[powerline-extra-symbols (commit 4eae6e8)](https://github.com/ryanoasis/powerline-extra-symbols)  
-[octicons v4.4.0](https://octicons.github.com/)  
-[fontawesome v4.7](http://fontawesome.io/)  
-[material-design-icons v3.0.1](https://github.com/google/material-design-icons)  
-[file-icons v2.1.4](https://atom.io/packages/file-icons)  
-[weather-icons v2.0.10](https://erikflowers.github.io/weather-icons/)  
-[font-linux v0.9](https://github.com/Lukas-W/font-linux)  
-[all-the-icons](https://github.com/domtronn/all-the-icons.el)  
-[devicons v1.8.0](https://github.com/vorillaz/devicons)  
-[Pomicons (commit bb0a579)](https://github.com/gabrielelana/pomicons)  
-[linea v1.0](http://linea.io/)  
-[font-mfizz v2.4.1](https://github.com/fizzed/font-mfizz)  
-
 ## Screenshots
 
 ![Screenshot the included icons](image/icons.jpg)
@@ -112,7 +98,7 @@ There are already 3618 glyphs included:
 
 ### Fish integration
 
-To use `icons-in-terminal` with fish, execute this line.  
+To use `icons-in-terminal` with fish, execute.  
 ```bash
 $ ln -s ~/.local/share/icons-in-terminal/icons.fish ~/.config/fish/
 ```
