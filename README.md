@@ -1,3 +1,5 @@
+![ls](image/ls.jpg)
+
 # icons-in-terminal
 
 ## Overview
@@ -17,7 +19,8 @@ You can add as many fonts as you want easily, you just need the ttf/odf file and
     * [**fish-shell**](#fish-integration)  
     * [**bash**](#bash-integration)  
     * [**emacs**](#emacs-integration)  
-7. [**Todos**](#todos)  
+7. [**Projects using icons-in-terminal**](#projects-using-icons-in-terminal)  
+8. [**Todos**](#todos)  
 
 ## Installation
 
@@ -127,6 +130,12 @@ Make a link of the file `~/.local/share/icons-in-terminal/icons-in-terminal.el` 
 (require 'icons-in-terminal)
 (insert (icons-in-terminal 'oct_flame)) ; C-h f icons-in-terminal[RET] for more info
 ```
+
+## Projects using icons-in-terminal
+
+### ls
+
+https://github.com/sebastiencs/coreutils-icons
 
 ## Todos
 
