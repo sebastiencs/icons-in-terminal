@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# What does this script ?
+#
+# Creates the files:
+#    ~/.fonts/icons-in-terminal.ttf
+#    ~/.config/fontconfig/conf.d/30-icons.conf
+#
+# Creates the directory:
+#    ~/.local/share/icons-in-terminal
+# or $XDG_DATA_HOME/icons-in-terminal (if $XDG_DATA_HOME is set)
+#
+# Run the command:
+# fc-cache
+
 source ./scripts/colors.sh
 
 set -xe
