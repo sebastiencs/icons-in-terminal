@@ -4,6 +4,7 @@
 
 `icons-in-terminal` allows you to get any fonts in your terminal without replacing or patching your font.  
 You can add as many fonts as you want easily, you just need the ttf/odf file and add it to `config.json`.  
+`icons-in-terminal` can also be use with graphical applications.  
 
 ## Table of Contents
 
@@ -68,7 +69,8 @@ $ ./build.sh
 This project is inspired by [awesome-terminal-fonts](https://github.com/gabrielelana/awesome-terminal-fonts) but is different.  
 I don't modify any existing font, I create a new one and insert each glyphs from the provided fonts in the [private use areas](https://en.wikipedia.org/wiki/Private_Use_Areas).  
 The file `~/.config/fontconfig/conf.d/30-icons.conf` tells to freetype to search the glyph in `icons-in-terminal.ttf` if it fails in your default font file. As the codepoints generated are in the private use areas, freetype should always fail and fallback to icons-in-terminal.ttf  
-The only requirement is that your default font shouldn't be already patched/modified. But why use a patched font with limited glyphs when they are all included here :)  
+The only requirement is that your default font shouldn't be already patched/modified. But why use a patched font with a limited number of glyphs when they are all included here :)  
+Your terminal emulator should also support [fallback font](https://en.wikipedia.org/wiki/Fallback_font) (most of them support it)  
 
 ## Included icons
 
@@ -98,13 +100,9 @@ There are already 3618 glyphs included:
 
 ### Fish integration
 
-To use `icons-in-terminal` with fish, execute.  
+To use `icons-in-terminal` with fish, add this line to `~/.config/fish/config.fish`:  
 ```bash
-$ ln -s ~/.local/share/icons-in-terminal/icons.fish ~/.config/fish/
-```
-Then add this line to `~/.config/fish/config.fish`:  
-```bash
-source ~/.config/fish/icons.fish
+source ~/.local/share/icons-in-terminal/icons.fish
 ```
 Restart a terminal, now you can print any icons with its name:  
 ```bash
@@ -113,13 +111,9 @@ $ echo $oct_location
 
 ### Bash integration
 
-Run:  
+Add this line to your .bashrc:  
 ```bash
-$ ln -s ~/.local/share/icons-in-terminal/icons_bash.sh ~/.config/
-```
-Then add this line to your .bashrc:  
-```bash
-source ~/.config/icons_bash.sh
+source ~/.local/share/icons-in-terminal/icons_bash.sh
 ```
 Restart a terminal, now you can print any icons with its name:  
 ```bash
@@ -131,7 +125,7 @@ $ echo -e $oct_location # note the '-e'
 Make a link of the file `~/.local/share/icons-in-terminal/icons-in-terminal.el` in your load-path.  
 ```el
 (require 'icons-in-terminal)
-(insert (icons-in-terminal 'oct_flame))
+(insert (icons-in-terminal 'oct_flame)) ; C-h f icons-in-terminal[RET] for more info
 ```
 
 ## Todos
