@@ -139,6 +139,10 @@ with open(sys.argv[1]) as config_file:
                 name = symbol.glyphname
                 font.selection.select(encoding)
                 font.copy()
+                if encoding == 0x20:
+                    dest.selection.select(0x20)
+                    dest.paste()
+                    continue
                 dest.selection.select(codepoint)
                 dest.paste()
                 dest.transform(psMat.translate(0, move_vertically))
@@ -153,6 +157,26 @@ with open(sys.argv[1]) as config_file:
         for (name, x) in inserted:
             print(name + ":" + str(hex(x)).replace("0x", ""), end=';')
         print("")
+
+    ascent = dest.ascent
+    descent = dest.descent
+
+    dest.os2_winascent_add = 0
+    dest.os2_windescent_add = 0
+    dest.os2_typoascent_add = 0
+    dest.os2_typodescent_add = 0
+    dest.hhea_ascent_add = 0
+    dest.hhea_descent_add = 0
+
+    # print ("ASCENT: " + str(ascent))
+    # print ("DESCENT: " + str(descent))
+
+    dest.os2_winascent = ascent
+    dest.os2_windescent = descent
+    dest.os2_typoascent = ascent
+    dest.os2_typodescent = -descent
+    dest.hhea_ascent = ascent
+    dest.hhea_descent = -descent
 
     dest.em = FONT_EM
     dest.fontname = "icons-in-terminal"
