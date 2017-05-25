@@ -23,11 +23,10 @@ for SCRIPT in "${SCRIPTS[@]}"; do
     if [ -n "$VERBOSE" ]; then
 	eval "$SCRIPT"
     else
-	readarray LIST_FONTS < <(eval $SCRIPT)
-	for FONT_NAME in "${LIST_FONTS[@]}"; do
+	while IFS='\n' read FONT_NAME; do
 	    FONT_NAME=`echo $FONT_NAME | tr -d '\n'`
 	    FONT_NAMES["$FONT_NAME"]=1
-	done
+	done < <(eval $SCRIPT)
     fi
 done
 
