@@ -25,7 +25,6 @@
 	"short-name": "file",
 	"path": "./fonts/file-icons.ttf",
 	"map-names": "fonts/file-icons-map",
-	"excludes": [ "0x20" ],
 	"move-vertically": -100
     },
     {
@@ -42,9 +41,8 @@
 	"start-from": "0xF100"
     },
     {
-	"name": "alltheicons",
-	"path": "./fonts/all-the-icons.ttf",
-	"start-from": "0xE903",
+	"name": "myicons",
+	"path": "./fonts/myicons.ttf",
 	"excludes": [ "0xFFFD" ]
     },
     {
