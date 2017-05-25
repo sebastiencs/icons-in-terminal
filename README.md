@@ -1,7 +1,5 @@
 ![ls](image/ls.jpg)
 
-# icons-in-terminal
-
 ## Overview
 
 `icons-in-terminal` allows you to get any fonts in your terminal without replacing or patching your font.  
@@ -20,6 +18,7 @@ You can add as many fonts as you want easily, you just need the ttf/odf file and
     * [**bash**](#bash-integration)  
     * [**emacs**](#emacs-integration)  
 7. [**Projects using icons-in-terminal**](#projects-using-icons-in-terminal)  
+    * [**ls**](#ls)  
 8. [**Todos**](#todos)  
 
 ## Installation
