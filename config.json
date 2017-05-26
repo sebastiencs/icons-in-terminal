@@ -108,5 +108,11 @@
 	"path": "./fonts/font-mfizz.ttf",
 	"map-names": "./fonts/font-mfizz-map",
 	"excludes": [ "0x20" ]
+    },
+    {
+	"name": "firacode",
+	"path": "./fonts/FiraCode-Regular-Symbol.otf",
+	"map-names": "./fonts/FiraCode-Regular-Symbol-map",
+	"excludes": [ "0xE0A0", "0xE0A1", "0xE0A2", "0xE0B0", "0xE0B1", "0xE0B2", "0xE0B3" ]
     }
 ]
