@@ -139,7 +139,7 @@ To use icons-in-terminal in your package:
 
 ### ls
 
-https://github.com/sebastiencs/coreutils-icons
+https://github.com/sebastiencs/ls-icons
 
 ## Todos
 
