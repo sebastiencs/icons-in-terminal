@@ -125,7 +125,11 @@ $ echo -e $oct_location # note the '-e'
 
 ### Emacs integration
 
-Make a link of the file `~/.local/share/icons-in-terminal/icons-in-terminal.el` in your load-path.  
+Add this line to your emacs init file:
+```el
+(add-to-list 'load-path "~/.local/share/icons-in-terminal/")
+```
+To use icons-in-terminal in your package:
 ```el
 (require 'icons-in-terminal)
 (insert (icons-in-terminal 'oct_flame)) ; C-h f icons-in-terminal[RET] for more info
