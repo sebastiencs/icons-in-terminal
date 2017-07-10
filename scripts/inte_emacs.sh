@@ -43,7 +43,7 @@ Examples of use: (insert (icons-in-terminal 'oct_flame))
                  (insert (icons-in-terminal 'oct_flame :face any-face :underline t))
                  (insert (icons-in-terminal 'oct_flame :inherit any-face :underline t)) ;; Similar to the line above
                  (insert (icons-in-terminal 'oct_flame :raise 0.2)).\"
-  (let* ((list-attributes '(:family \"icons-in-terminal\"))
+  (let* ((list-attributes (list (:family \"icons-in-terminal\")))
 	 (face (or (plist-get attributes :inherit) (plist-get attributes :face)))
 	 (foreground (plist-get attributes :foreground))
 	 (distant-foreground (plist-get attributes :distant-foreground))
