@@ -55,10 +55,10 @@ If you want to add new font, there are a few dependencies to install:
 You can add the name and path of your font to the file `config.json`.  
 You should add it at the end of `config.json` to avoid to shift all codepoints of the others font.  
 Each font can take parameters:  
-- `start-from`: exclude all glyphs before the given codepoint.
-- `until`: exclude all glyphs at the given codepoint and after.
+- `start-from`: exclude all glyphes before the given codepoint.
+- `until`: exclude all glyphes at the given codepoint and after.
 - `excludes`: exclude the given codepoints.
-- `move-vertically`: Use this parameter if your font and its glyphs are not centered vertically.
+- `move-vertically`: Use this parameter if your font and its glyphes are not centered vertically.
 - `short-name`: Prefix to insert before the glyph name when you want to use the icon in your shell or anywhere else
 - `map-names`: Define a name to the glyph. If not provided, the name will be read from the ttf file
 
@@ -69,14 +69,14 @@ $ ./build.sh
 ## How it works
 
 This project is inspired by [awesome-terminal-fonts](https://github.com/gabrielelana/awesome-terminal-fonts) but is different.  
-I don't modify any existing font, I create a new one and insert each glyphs from the provided fonts in the [private use areas](https://en.wikipedia.org/wiki/Private_Use_Areas).  
+I don't modify any existing font, I merge all glyphes from the provided fonts in a new font file and insert them in the [private use areas](https://en.wikipedia.org/wiki/Private_Use_Areas).  
 The file `~/.config/fontconfig/conf.d/30-icons.conf` tells to freetype to search the glyph in `icons-in-terminal.ttf` if it fails in your default font file. As the codepoints generated are in the private use areas, freetype should always fail and fallback to icons-in-terminal.ttf  
-The only requirement is that your default font shouldn't be already patched/modified. But why use a patched font with a limited number of glyphs when they are all included here :)  
+The only requirement is that your default font shouldn't be already patched/modified. But why use a patched font with a limited number of glyphes when they are all included here :)  
 Your terminal emulator should also support [fallback font](https://en.wikipedia.org/wiki/Fallback_font) (most of them support it)  
 
 ## Included icons
 
-There are already 3618 glyphs included:  
+There are already 3618 glyphes included:  
 
 | Name                                                                             | Version        | Notes |
 | ---------------------------------------------------------------------------------|---------------:|--------|
