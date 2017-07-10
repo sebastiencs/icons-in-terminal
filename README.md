@@ -87,12 +87,11 @@ There are already 3618 glyphs included:
 | [file-icons](https://atom.io/packages/file-icons)                                | 2.1.4          | |
 | [weather-icons](https://erikflowers.github.io/weather-icons/)                    | 2.0.10         | |
 | [font-linux](https://github.com/Lukas-W/font-linux)                              | 0.9            | |
-| [all-the-icons](https://github.com/domtronn/all-the-icons.el)                    |                | |
 | [devicons](https://github.com/vorillaz/devicons)                                 | 1.8.0          | |
 | [Pomicons](https://github.com/gabrielelana/pomicons)                             | commit bb0a579 | |
 | [linea](http://linea.io/)                                                        | 1.0            | |
 | [font-mfizz](https://github.com/fizzed/font-mfizz)                               | 2.4.1          | |
-| [FiraCode](https://github.com/tonsky/FiraCode)                                   | 1.200          | See if your terminal is [compatible](https://github.com/tonsky/FiraCode#terminal-support). Use [this](https://github.com/tonsky/FiraCode/issues/211#issuecomment-239058632) font file  |
+| [FiraCode](https://github.com/tonsky/FiraCode)                                   | [1.200](https://github.com/tonsky/FiraCode/issues/211#issuecomment-239058632) | See if your terminal is [compatible](https://github.com/tonsky/FiraCode#terminal-support) |
 
 ## Screenshots
 
