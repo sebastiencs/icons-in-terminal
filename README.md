@@ -19,6 +19,7 @@ You can add as many fonts as you want easily, you just need the ttf/odf file and
     * [**emacs**](#emacs-integration)  
 7. [**Projects using icons-in-terminal**](#projects-using-icons-in-terminal)  
     * [**ls**](#ls)  
+    * [**emacs**](#emacs)  
 8. [**Todos**](#todos)  
 
 ## Installation
