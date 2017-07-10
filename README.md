@@ -140,6 +140,10 @@ To use icons-in-terminal in your package:
 
 https://github.com/sebastiencs/ls-icons
 
+### emacs
+
+https://github.com/sebastiencs/sidebar.el
+
 ## Todos
 
 - Integrate with differents shells
