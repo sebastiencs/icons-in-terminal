@@ -19,8 +19,8 @@ get_profiles() {
 	    "[profiles]") PROFILE=1;;
 	esac
 	if [ $PROFILE -eq 1 -a "$LINE" != "[profiles]" ]; then
-	    echo "${LINE[0]]}" | sed 's/ = /=/g'
-	    GLOBAL_PROFILES+=("${LINE[0]]}")
+	    echo "${LINE[0]}" | sed 's/ = /=/g'
+	    GLOBAL_PROFILES+=("${LINE[0]}")
 	fi
     done  < "$1"
 }
