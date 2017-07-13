@@ -10,7 +10,7 @@
 	"path": "./fonts/FontAwesome.otf",
 	"start-from": "0xF000",
 	"map-names": "fonts/FontAwesome-map",
-	"until": "0xF2B5"
+	"until": "0xF2E1"
     },
     {
 	"name": "material",
