@@ -31,6 +31,7 @@ $ git clone https://github.com/sebastiencs/icons-in-terminal.git
 To install `icons-in-terminal`, run:  
 ```bash
 $ ./install.sh  
+$ # Follow the instructions to edit ~/.config/fontconfig/conf.d/30-icons.conf
 ```
 Or if your terminal is [supported](https://github.com/sebastiencs/icons-in-terminal/issues/1) (Experimental)
 ```bash
