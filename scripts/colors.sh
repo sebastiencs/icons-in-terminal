@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 NORMAL='\033[0m'
 RED='\033[00;31m'

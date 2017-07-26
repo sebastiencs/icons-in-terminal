@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Generate a fontconfig configuration file
 # See /etc/fonts/conf.d/README
