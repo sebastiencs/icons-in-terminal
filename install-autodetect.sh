@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+#
 # What does this script ?
 #
 # Creates the files:
@@ -10,28 +11,24 @@
 #    ~/.local/share/icons-in-terminal
 # or $XDG_DATA_HOME/icons-in-terminal (if $XDG_DATA_HOME is set)
 #
+# Copy the built files in the created directory
+#
 # Run the command:
 # fc-cache
+#
 
 set -xe
+
+DATA="${XDG_DATA_HOME:-${HOME}/.local/share}/icons-in-terminal/"
 
 mkdir -p ~/.fonts
 cp ./build/icons-in-terminal.ttf ~/.fonts/
 mkdir -p ~/.config/fontconfig/conf.d
-#cp ./sample/icons.conf ~/.config/fontconfig/conf.d/30-icons.conf
-
 ./scripts/generate_fontconfig_autodetect.sh > ~/.config/fontconfig/conf.d/30-icons.conf
-#./scripts/generate_fontconfig.sh > ~/.config/fontconfig/conf.d/30-icons.conf
-
 fc-cache -fvr --really-force ~/.fonts
 
-DATA="${HOME}/.local/share"
-if [ -n "$XDG_DATA_HOME" ]; then
-    DATA=$XDG_DATA_HOME
-fi
-DATA="${DATA}/icons-in-terminal/"
-mkdir -p $DATA
-cp ./build/* $DATA
+mkdir -p "$DATA"
+cp ./build/* "$DATA"
 
 set +xe
 

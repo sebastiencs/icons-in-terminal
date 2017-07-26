@@ -81,16 +81,11 @@ read_profiles() {
     done
 }
 
-FILES_CONFIG[0]=~/.config/terminator/config
-if [ -n "$XDG_CONFIG_HOME" ]; then
-    FILES_CONFIG[1]=${XDG_CONFIG_HOME}/terminator/config
-fi
+FILE_CONFIG=${XDG_CONFIG_HOME:-${HOME}/.config}/terminator/config
 
-for FILE_CONFIG in "${FILES_CONFIG[@]}"; do
-    if [ -e $FILE_CONFIG -a -r $FILE_CONFIG  ];then
-	read_profiles "$FILE_CONFIG"
-    fi
-done
+if [ -e $FILE_CONFIG -a -r $FILE_CONFIG  ];then
+    read_profiles "$FILE_CONFIG"
+fi
 
 if [ $FOUND -eq 0 ];then
 

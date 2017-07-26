@@ -7,6 +7,7 @@ echo '<?xml version="1.0"?>
 <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
 <fontconfig>'
 
+echo '  <!-- You are supposed to remove all the lines but the one(s) where the font is used in your terminal -->'
 echo '  <!-- Only monospaced fonts have been listed here -->'
 echo "  <!-- If your font isn't in the list, uncomment the next line and write its name -->"
 echo "  <!-- <alias><family>YOUR_TERMINAL_FONT</family><default><family>icons-in-terminal</family></default></alias> -->"

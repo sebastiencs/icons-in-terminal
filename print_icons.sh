@@ -26,26 +26,6 @@ do
 	done
 	echo -e $str | sed 's/ /  /g'
     fi
-
 done < "$filename"
 
-echo -e "\n${GREEN}Total: $count glyphs${NC}"
-
-# while read -r line
-# do
-#     name=`echo $line | cut -d ':' -f 1`
-#     start=`echo $line | cut -d ':' -f 2 | cut -d '-' -f 1`
-#     end=`echo $line | cut -d ':' -f 2 | cut -d '-' -f 2`
-
-#     echo -e "${YELLOW}$name${NC}:"
-
-#     for x in $(seq $start $end)
-#     do
-# 	current=`printf "%x\n" "$x"`
-# 	# current=`printf "%x\n" "$x"`
-# 	echo -ne "\u$current  "
-#     done
-
-#     echo -e "\n"
-
-# done < "$filename"
+echo -e "\n${GREEN}Total: $count glyphes${NC}"
