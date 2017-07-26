@@ -2,9 +2,9 @@
 
 ## Overview
 
-`icons-in-terminal` allows you to get any fonts in your terminal without replacing or patching your font.  
-You can add as many fonts as you want easily, you just need the ttf/odf file and add it to `config.json`.  
-`icons-in-terminal` can also be use with graphical applications.  
+- `icons-in-terminal` allows you to get any fonts in your terminal without replacing or patching your font.  
+- You can add as many fonts as you want easily, you just need the ttf/odf file and add it to `config.json`.  
+- `icons-in-terminal` can also be use with graphical applications.  
 
 ## Table of Contents
 
@@ -44,18 +44,19 @@ $ ./print_icons.sh
 $ ./print_icons.sh --names
 $ ./print_icons.sh --names | grep ANY_NAME
 ```
-To use icons in your terminal, do not copy-paste icons from the output of `print_icons.sh` but use variable. See [integrations](#integrations).  
-When one of the font provided will be update and add new icons, some codepoints in `icons-in-terminal.ttf` will be changed. The variable won't.  
+To use icons in your terminal, **do not copy-paste icons** from the output of `print_icons.sh` but use their variable name: see [integrations](#integrations).  
+When one of the provided font will be updated and add new icons, some codepoints in `icons-in-terminal.ttf` will be changed, the variable names won't.  
 
 ## Building
 
-If you want to add new font, there are a few dependencies to install:  
+If you want to add new font, follow these instructions:  
+
+There are a few dependencies to install:  
 
 - Python 3
 - [fontforge (with python extension)](https://fontforge.github.io)
 
 You can add the name and path of your font to the file `config.json`.  
-You should add it at the end of `config.json` to avoid to shift all codepoints of the others font.  
 Each font can take parameters:  
 - `start-from`: exclude all glyphes before the given codepoint.
 - `until`: exclude all glyphes at the given codepoint and after.
