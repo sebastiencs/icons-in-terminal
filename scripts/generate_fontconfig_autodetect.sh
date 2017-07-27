@@ -32,7 +32,7 @@ done
 
 for FONT_NAME in "${!FONT_NAMES[@]}"; do
     if [ -z $VERBOSE ]; then
-	echo '  <alias><family>'"${FONT_NAME}"'</family><default><family>icons-in-terminal</family></default></alias>'
+	echo '  <alias><family>'"${FONT_NAME}"'</family><prefer><family>icons-in-terminal</family></prefer></alias>'
 	#echo '  <alias><family>'"${FONT_NAME}"'</family><prefer><family>icons-in-terminal</family></prefer><default><family>icons-in-terminal</family></default></alias>'
     fi
 done
