@@ -131,6 +131,8 @@ Add this line to your emacs init file:
 ```el
 (add-to-list 'load-path "~/.local/share/icons-in-terminal/")
 ```
+You also need [font-lock+](https://www.emacswiki.org/emacs/download/font-lock%2b.el) and it is not on melpa. :-( 
+
 To use icons-in-terminal in your package:
 ```el
 (require 'icons-in-terminal)
