@@ -17,10 +17,11 @@
     * [**fish-shell**](#fish-integration)  
     * [**bash**](#bash-integration)  
     * [**emacs**](#emacs-integration)  
-7. [**Projects using icons-in-terminal**](#projects-using-icons-in-terminal)  
+7. [**Suported Terminal**]
+8. [**Projects using icons-in-terminal**](#projects-using-icons-in-terminal)  
     * [**ls**](#ls)  
     * [**emacs**](#emacs)  
-8. [**Todos**](#todos)  
+9. [**Todos**](#todos)  
 
 ## Installation
 
@@ -136,6 +137,45 @@ To use icons-in-terminal in your package:
 (require 'icons-in-terminal)
 (insert (icons-in-terminal 'oct_flame)) ; C-h f icons-in-terminal[RET] for more info
 ```
+
+## Supported Terminal
+
+| Terminal          | Tested     |
+|-------------------|------------|
+| aterm             | not tested |
+| fbterm            | Yes        |
+| Cool Retro Term   | not tested |
+| Eterm             | not tested |
+| evilvte           | not tested |
+| Gate One          | not tested |
+| Germinal          | not tested |
+| GNOME Terminal    | Yes        |
+| Guake             | not tested |
+| Konsole           | not tested |
+| iterm2            | Yes        |
+| LilyTerm          | not tested |
+| LXTerminal        | not tested |
+| MATE terminal     | not tested |
+| mlterm            | not tested |
+| Pantheon Terminal | not tested |
+| QTerminal         | not tested |
+| ROXTerm           | not tested |
+| rxvt              | not tested |
+| Sakura            | Yes        |
+| Shellinabox       | not tested |
+| st                | not tested |
+| Termite           | yes        |
+| Terminal          | not tested |
+| Terminator        | Yes        |
+| Terminology       | not tested |
+| Termite           | Yes        |
+| Tilda             | not tested |
+| Tilix             | Yes        |
+| Tinyterm          | not tested |
+| urxvt             | Yes        |
+| xfce4-terminal    | not tested |
+| xterm             | not tested |
+| Yakuake           | not tested |
 
 ## Projects using icons-in-terminal
 
