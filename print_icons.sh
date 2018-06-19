@@ -28,4 +28,4 @@ do
     fi
 done < "$filename"
 
-echo -e "\n${GREEN}Total: $count glyphes${NC}"
+echo -e "\n${GREEN}Total: $count glyphs${NC}"
