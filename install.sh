@@ -23,11 +23,17 @@ set -xe
 
 DATA="${XDG_DATA_HOME:-${HOME}/.local/share}/icons-in-terminal/"
 
-mkdir -p ~/.fonts
-cp ./build/icons-in-terminal.ttf ~/.fonts/
+FONT_DIR=~/.local/share/fonts
+mkdir -p $FONT_DIR
+cp ./build/icons-in-terminal.ttf $FONT_DIR
 mkdir -p ~/.config/fontconfig/conf.d
-./scripts/generate_fontconfig.sh > ~/.config/fontconfig/conf.d/30-icons.conf
-fc-cache -fvr --really-force ~/.fonts
+# Make temporary file first to prevent incomplete conf file from being used by
+# fc-list inside generate_fontconfig.sh. cf) fontconfig loads conf.d/[0-9]*
+TMP_CONF_FILE=~/.config/fontconfig/conf.d/tmp-30-icons.conf
+CONF_FILE=~/.config/fontconfig/conf.d/30-icons.conf
+./scripts/generate_fontconfig.sh > $TMP_CONF_FILE
+mv $TMP_CONF_FILE $CONF_FILE
+fc-cache -fvr --really-force $FONT_DIR
 
 mkdir -p "$DATA"
 cp ./build/* "$DATA"
@@ -35,6 +41,6 @@ cp ./build/* "$DATA"
 set +xe
 
 echo -e "\n${YELLOW}Recommended additional step:"
-echo "Edit ~/.config/fontconfig/conf.d/30-icons.conf"
+echo "Edit $CONF_FILE"
 echo "Check that the font(s) you are using in your terminal(s) is listed and remove all the others lines"
 echo -e "\n${NORMAL}Font successfully installed. Now start a new terminal and run print_icons.sh :)"
