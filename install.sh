@@ -27,8 +27,12 @@ FONT_DIR=~/.local/share/fonts
 mkdir -p $FONT_DIR
 cp ./build/icons-in-terminal.ttf $FONT_DIR
 mkdir -p ~/.config/fontconfig/conf.d
+# Make temporary file first to prevent incomplete conf file from being used by
+# fc-list inside generate_fontconfig.sh. cf) fontconfig loads conf.d/[0-9]*
+TMP_CONF_FILE=~/.config/fontconfig/conf.d/tmp-30-icons.conf
 CONF_FILE=~/.config/fontconfig/conf.d/30-icons.conf
-./scripts/generate_fontconfig.sh > $CONF_FILE
+./scripts/generate_fontconfig.sh > $TMP_CONF_FILE
+mv $TMP_CONF_FILE $CONF_FILE
 fc-cache -fvr --really-force $FONT_DIR
 
 mkdir -p "$DATA"
