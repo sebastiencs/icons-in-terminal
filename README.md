@@ -147,6 +147,10 @@ https://github.com/sebastiencs/ls-icons
 
 https://github.com/sebastiencs/sidebar.el
 
+### nnn
+
+https://github.com/jarun/nnn
+
 ## Todos
 
 - Integrate with differents shells
