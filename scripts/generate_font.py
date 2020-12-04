@@ -1,4 +1,9 @@
-#!/usr/bin/env python3
+# XXX:
+#   `argv` will be injected here by the invoker. Since FontForge is now
+#   an AppImage, this script can no longer be invoked using a shebang.
+#   the $PWD will be provided as `argv[0]` and you must access files
+#   using their full path, otherwise the paths get clobbered.
+PWD = argv[0]
 
 import string
 import os
@@ -6,6 +11,9 @@ import sys
 import json
 import fontforge
 import psMat
+
+os.chdir(PWD)
+print(f"Running in '{PWD}'", file=sys.stderr)
 
 PUA_START = 0xE000
 PUA_END = 0xF8FF
@@ -38,9 +46,9 @@ def lookup_map_name(map_names, codepoint, fallback_name):
 # our font compatible with most of plugins/modules that insert those glyphs
 def insert_powerline_extra(dest):
     codepoint = POWERLINE_START
-    font = fontforge.open("./fonts/PowerlineExtraSymbols.otf")
+    font = fontforge.open(f"{PWD}/fonts/PowerlineExtraSymbols.otf")
     font.em = FONT_EM
-    map_names = read_map_names("./fonts/PowerlineExtraSymbols-map")
+    map_names = read_map_names(f"{PWD}/fonts/PowerlineExtraSymbols-map")
     excludes = [ 0xE0A4, 0xE0A5, 0xE0A6, 0xE0A7, 0xE0A8, 0xE0A9, 0xE0AA, 0xE0AB,
                  0xE0AC, 0xE0AD, 0xE0AE, 0xE0AF, 0xE0C9, 0xE0CB, 0xE0D3 ]
     inserted = []
@@ -78,11 +86,11 @@ def make_name(name, name_font):
         return name_font + "_" + name[-4:]
     return name_font + "_" + name.replace("-", "_")
 
-if len(sys.argv) < 2:
-    print("Give me a config file", file=sys.stderr)
-    sys.exit(1)
+# if len(sys.argv) < 2:
+#     print("Give me a config file", file=sys.stderr)
+#     sys.exit(1)
 
-with open(sys.argv[1]) as config_file:
+with open(PWD+argv[1]) as config_file:
     config_data = json.load(config_file)
 
     dest = fontforge.font()
@@ -96,7 +104,7 @@ with open(sys.argv[1]) as config_file:
 
     for json_file in config_data:
 
-        font = fontforge.open(json_file["path"])
+        font = fontforge.open(PWD+"/"+json_file["path"])
         font.em = FONT_EM
 
         excludes = []
