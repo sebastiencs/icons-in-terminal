@@ -14,7 +14,7 @@ echo "  <!-- <alias><family>YOUR_TERMINAL_FONT</family><default><family>icons-in
 
 while IFS='\n' read FONT_NAME;
 do
-    FONT_NAME=`echo $FONT_NAME | tr -d '\n'`
+    FONT_NAME=`echo $FONT_NAME | tr -d '\n' | xml esc`
     echo '  <alias><family>'"${FONT_NAME}"'</family><prefer><family>icons-in-terminal</family></prefer></alias>'
 #    echo '  <alias><family>'"${FONT_NAME}"'</family><prefer><family>icons-in-terminal</family></prefer><default><family>icons-in-terminal</family></default></alias>'
 done < <(fc-list :mono family | sort | sed "s/\\\-/-/g" | grep -v 'icons-in-terminal')

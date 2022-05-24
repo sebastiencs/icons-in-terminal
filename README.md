@@ -55,6 +55,7 @@ There are a few dependencies to install:
 
 - Python 3
 - [fontforge (with python extension)](https://fontforge.github.io)
+- [XMLStarlet](http://xmlstar.sourceforge.net/)
 
 You can add the name and path of your font to the file `config.json`.  
 Each font can take parameters:  
