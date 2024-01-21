@@ -37,7 +37,7 @@ Or if your terminal is [supported](https://github.com/sebastiencs/icons-in-termi
 ```bash
 $ ./install-autodetect.sh 
 ```
-Done ! You can start a new terminal and run `print_icons.sh` to see the installed gryphs.  
+Done ! You can start a new terminal and run `print_icons.sh` to see the installed glyphs.  
 You can see names of each icon by giving any parameter to `print_icons.sh`:  
 ```bash
 $ ./print_icons.sh
